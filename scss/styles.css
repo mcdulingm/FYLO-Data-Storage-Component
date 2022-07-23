@@ -28,7 +28,7 @@ body {
   body {
     background-image: url(bg-desktop.png);
     background-size: auto;
-    background-position: 0 50vh;
+    background-position: 0 100%;
     background-color: #0c122c;
   }
 }

@@ -49,7 +49,7 @@ body {
     @include for-tablet-portrait-up {
         background-image: url(bg-desktop.png);
         background-size: auto;
-        background-position: 0 50vh; 
+        background-position: 0 100%; 
         background-color: $verydarkblue;
     }
     @include for-desktop-up {

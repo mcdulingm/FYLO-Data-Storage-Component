@@ -17,11 +17,11 @@ $paragraph: 18px;
 $mainfont: 'Raleway', sans-serif;
 
 @mixin for-tablet-portrait-up {
-    @media (min-width: 769px) { @content; }
+    @media (min-width: 770px) { @content; }
   }
 
   @mixin for-desktop-up {
-    @media (min-width: 1440px) { @content; }
+    @media (min-width: 1441px) { @content; }
   }
 
 * {

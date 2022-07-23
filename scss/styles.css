@@ -24,7 +24,7 @@ body {
   overflow: scroll;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 770px) {
   body {
     background-image: url(bg-desktop.png);
     background-size: auto;
@@ -33,7 +33,7 @@ body {
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   body {
     background-size: cover;
   }
@@ -66,7 +66,7 @@ main {
   width: 100%;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 770px) {
   .wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -94,7 +94,7 @@ main {
   width: 100%;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 770px) {
   .title {
     max-width: 350px;
     margin-bottom: 0;
@@ -145,7 +145,7 @@ main {
   width: 100%;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 770px) {
   .info {
     padding: 43px 38px 43px 40px;
     max-width: 540px;
@@ -162,7 +162,7 @@ main {
   margin: 1em auto;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 770px) {
   .info__slider {
     margin-bottom: 0;
   }
@@ -230,7 +230,7 @@ main {
   line-height: 0.9;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 770px) {
   .info__summary {
     left: auto;
     right: 40px;
@@ -279,7 +279,7 @@ main {
   font-size: 0.8em;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 770px) {
   .attribution {
     position: absolute;
     bottom: 2em;

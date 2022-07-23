@@ -1,0 +1,255 @@
+//Primary Colors
+
+$gradientOne:hsl(6, 100%, 80%);
+$gradientTwo:hsl(335, 100%, 65%);
+
+//Neutral
+
+$paleblue: hsl(243, 100%, 93%);
+$grayishblue: hsl(229, 7%, 55%);
+$darkblue: hsl(228, 56%, 26%);
+$verydarkblue: hsl(229, 57%, 11%);
+$white: hsl(0, 0%, 100%);
+
+//Fonts
+
+$paragraph: 18px;
+$mainfont: 'Raleway', sans-serif;
+
+@mixin for-tablet-portrait-up {
+    @media (min-width: 769px) { @content; }
+  }
+
+  @mixin for-desktop-up {
+    @media (min-width: 1440px) { @content; }
+  }
+
+* {
+    margin: 0;
+	padding: 0;
+	border: 0;
+    outline:none;
+	font-size: 100%;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+body {
+    background: $verydarkblue;
+    background-image: url(/images/bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    @include for-tablet-portrait-up {
+        background-image: url(/images/bg-desktop.png);
+        background-size: auto;
+        background-position: 0 50vh; 
+        background-color: $verydarkblue;
+    }
+    @include for-desktop-up {
+        background-size: cover;
+    }
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    font-family: $mainfont;
+    color: $white;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.wrapper {
+    padding: 25px;
+    width: 100%;
+    @include for-tablet-portrait-up {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-end;
+        gap:2em;
+    }
+    
+}
+
+.title {
+    padding: 40px;
+    margin-bottom: 1em;
+    background-color: $darkblue;
+    border-radius: 0.5em 7em 0.5em 0.5em;
+    height: 201px;
+    width: 100%;
+    @include for-tablet-portrait-up {
+        max-width: 350px;
+        margin-bottom: 0;
+    }
+    &__options {
+        display: flex;
+        gap: 1em;
+        margin-top: 30px;
+        &__btn {
+            border-radius: 0.5em;
+            background-color: $verydarkblue;
+            width: 3em;
+            height: 3em;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            align-items: center;
+            &:hover, &:focus {
+                margin-top: -10px;
+                opacity: 0.7;
+                transform: rotate(-10deg);
+            }
+        }
+    }
+}
+
+.info {
+    padding: 35px 32px 55px 32px;
+    background-color: $darkblue;
+    border-radius: 0.5em;
+    color: $paleblue;
+    text-align: center;
+    position: relative;
+    height: 160px;
+    width: 100%;
+    @include for-tablet-portrait-up {
+        padding: 43px 38px 43px 40px;
+        max-width: 540px;
+        height: 154px;
+        text-align: left;
+    }
+    &__text {
+        font-size: 0.9em;
+    }
+    &__slider {
+        margin: 1em auto;
+        @include for-tablet-portrait-up {
+            margin-bottom: 0;
+        }
+        &__scroll {
+            height: 20px;
+            border-radius: 5em;
+            overflow: hidden;
+            background-color: $verydarkblue;
+
+            &--pink {
+                background-image: linear-gradient(to right,$gradientOne,$gradientTwo);
+                border: 3px solid $verydarkblue;
+                width: 81.5%;
+                height: 100%;
+                border-radius: 3em;
+                box-sizing: border-box;
+                position: relative;
+                &::after {
+                    content: '';
+                    border-radius: 50%;
+                    width: 10px;
+                    display: block;
+                    background-color: $white;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    top: 0;
+                    border: 2px solid $gradientTwo;
+                }
+            }
+        }
+
+        &__val {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9em;
+            margin-top: 0.7em;
+        }
+    }
+
+    &__summary {
+        position: absolute;
+        left: 0; 
+        right: 0; 
+        margin-left: auto; 
+        margin-right: auto;
+        max-width: 9em;
+        padding:1em;
+        background-color: $white;
+        border-radius: 0.5em;
+        width: 100%;
+        max-width: 179px;
+        height: 100%;
+        max-height: 72px;
+        display: block;
+        line-height: 0.9;
+        @include for-tablet-portrait-up {
+            left: auto;
+            right: 40px;
+            top:-3em;
+            &::after {
+                content: '';
+                width: 0;
+                height: 0;
+                border-top: 25px solid white;
+                border-left: 25px solid transparent;
+                position: absolute;
+                display: block;
+                right: 0;
+                bottom: -18px;
+            }
+        }
+        h3 {
+            font-size: 2.5em;
+            color: $verydarkblue;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            span {
+                font-size: 0.3em;
+                margin-top: 5px;
+                color: $grayishblue;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.attribution {
+    position: relative;
+    margin-top: 5em;
+    width: 90%;
+    text-align: center;
+    font-size: 0.8em;
+    @include for-tablet-portrait-up {
+        position: absolute;
+        bottom: 2em;
+    }
+
+    a {
+        color: $gradientTwo;
+        &:hover, &:focus {
+            text-decoration: underline;
+            color: $gradientOne;
+        }
+    }
+}

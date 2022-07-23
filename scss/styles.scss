@@ -99,6 +99,7 @@ main {
     border-radius: 0.5em 7em 0.5em 0.5em;
     height: 201px;
     width: 100%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     @include for-tablet-portrait-up {
         max-width: 350px;
         margin-bottom: 0;
@@ -134,6 +135,7 @@ main {
     position: relative;
     height: 160px;
     width: 100%;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     @include for-tablet-portrait-up {
         padding: 43px 38px 43px 40px;
         max-width: 540px;

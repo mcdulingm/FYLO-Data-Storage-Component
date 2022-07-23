@@ -45,7 +45,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    overflow: scroll;
     @include for-tablet-portrait-up {
         background-image: url(/images/bg-desktop.png);
         background-size: auto;
